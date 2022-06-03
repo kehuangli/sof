@@ -51,6 +51,14 @@ config COMP_UP_DOWN_MIXER
          Downmixing for mono output:
          4.0, Quatro, 3.1, 2 -> 1
 
+config COMP_BLOB
+	bool "Large IPC data as compound message blobs"
+	default y
+	help
+	 Select to support sending large data blobs to firmware as
+	 multiple IPC messages. Not all components or modules need
+	 this. If unsure, say yes.
+
 if COMP_VOLUME
 
 config COMP_VOLUME_WINDOWS_FADE
